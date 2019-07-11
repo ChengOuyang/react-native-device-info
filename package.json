@@ -1,28 +1,49 @@
 {
-  "name": "react-native-device-info",
-  "version": "2.2.2",
+  "_from": "react-native-device-info@0.13.0",
+  "_id": "react-native-device-info@0.13.0",
+  "_inBundle": false,
+  "_integrity": "sha1-gQUe69PbaVnk8dLLCujfdBBQQM8=",
+  "_location": "/react-native-device-info",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "react-native-device-info@0.13.0",
+    "name": "react-native-device-info",
+    "escapedName": "react-native-device-info",
+    "rawSpec": "0.13.0",
+    "saveSpec": null,
+    "fetchSpec": "0.13.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/react-native-device-info/download/react-native-device-info-0.13.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-native-device-info%2Fdownload%2Freact-native-device-info-0.13.0.tgz",
+  "_shasum": "81051eebd3db6959e4f1d2cb0ae8df74105040cf",
+  "_spec": "react-native-device-info@0.13.0",
+  "_where": "/Users/oyc/Documents/Agilean/Project/vszOnline",
+  "author": {
+    "name": "Rebecca Hughes",
+    "email": "rebecca@learnium.net",
+    "url": "https://github.com/rebeccahughes"
+  },
+  "bugs": {
+    "url": "https://github.com/rebeccahughes/react-native-device-info/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Gant Laborde",
+      "email": "gant@infinite.red",
+      "url": "https://github.com/gantman"
+    }
+  ],
+  "deprecated": false,
   "description": "Get device information using react-native",
-  "main": "deviceinfo.js",
-  "typings": "./deviceinfo.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/react-native-community/react-native-device-info"
+  "devDependencies": {
+    "np": "^2.16.0"
   },
-  "scripts": {
-    "analyze": "npm run ts-check && npm run flow-check",
-    "dev-sync": "cp -r deviceinfo* *podspec default windows web android ios example/node_modules/react-native-device-info/",
-    "flow-check": "npx flow check-contents < deviceinfo.js.flow",
-    "lint": "npx eslint ./ --ignore-pattern example --ignore-pattern node_modules --fix --quiet",
-    "shipit": "np --no-yarn",
-    "ts-check": "npx tsc deviceinfo.d.ts --noEmit",
-    "precommit": "lint-staged && npm run analyze"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run lint",
-      "git add"
-    ]
-  },
+  "homepage": "https://github.com/rebeccahughes/react-native-device-info#readme",
   "keywords": [
     "react-component",
     "react-native",
@@ -33,38 +54,16 @@
     "events",
     "cocoapod"
   ],
-  "author": "Rebecca Hughes <rebecca@learnium.net> (https://github.com/rebeccahughes)",
-  "contributors": [
-    {
-      "name": "Gant Laborde",
-      "email": "gant@infinite.red",
-      "url": "https://github.com/gantman"
-    },
-    {
-      "name": "Mehdi Achour",
-      "email": "machour@gmail.com",
-      "url": "https://github.com/machour"
-    },
-    {
-      "name": "Mike Hardy",
-      "email": "github@mikehardy.net",
-      "url": "https://github.com/mikehardy"
-    }
-  ],
   "license": "MIT",
-  "devDependencies": {
-    "@react-native-community/eslint-config": "0.0.5",
-    "eslint": "^6.0.1",
-    "flow-bin": "^0.102.0",
-    "husky": "^3.0.0",
-    "lint-staged": "^9.0.2",
-    "np": "^5.0.3",
-    "prettier": "^1.18.2",
-    "react": "^16.8.3",
-    "typescript": "^3.5.2"
+  "main": "deviceinfo.js",
+  "name": "react-native-device-info",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebeccahughes/react-native-device-info.git"
   },
-  "eslintConfig": {
-    "extends": "@react-native-community"
+  "scripts": {
+    "shipit": "np"
   },
-  "dependencies": {}
+  "typings": "./deviceinfo.d.ts",
+  "version": "0.13.0"
 }
