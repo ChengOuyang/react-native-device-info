@@ -9,6 +9,7 @@
 #import "RNDeviceInfo.h"
 #import "DeviceUID.h"
 #if !(TARGET_OS_TV)
+#import <WebKit/WebKit.h>
 #import <LocalAuthentication/LocalAuthentication.h>
 #endif
 
@@ -166,7 +167,7 @@ RCT_EXPORT_MODULE()
 #if TARGET_OS_TV
     return @"not available";
 #else
-    UIWebView* webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+    WKWebView* webView = [[WKWebView alloc] initWithFrame:CGRectZero];
     return [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
 #endif
 }
