@@ -9,7 +9,6 @@
 #import "RNDeviceInfo.h"
 #import "DeviceUID.h"
 #if !(TARGET_OS_TV)
-#import <WebKit/WebKit.h>
 #import <LocalAuthentication/LocalAuthentication.h>
 #endif
 
@@ -162,16 +161,6 @@ RCT_EXPORT_MODULE()
     return carrier.carrierName;
 }
 
-- (NSString*) userAgent
-{
-#if TARGET_OS_TV
-    return @"not available";
-#else
-    WKWebView* webView = [[WKWebView alloc] initWithFrame:CGRectZero];
-    return [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
-#endif
-}
-
 - (NSString*) deviceLocale
 {
     NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
@@ -223,7 +212,6 @@ RCT_EXPORT_MODULE()
              @"buildNumber": [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"],
              @"systemManufacturer": @"Apple",
              @"carrier": self.carrier ?: [NSNull null],
-             @"userAgent": self.userAgent,
              @"timezone": self.timezone,
              @"isEmulator": @(self.isEmulator),
              @"isTablet": @(self.isTablet),
